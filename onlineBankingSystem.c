@@ -10,6 +10,18 @@ struct user {
 };
 
 int main(){
+
+ printf(" ___________________________________________________________________\n");
+ printf("|                           WELCOME TO OUR                          |\n");
+ printf("|                       ONLINE BANKING SYSTEM                       |\n");
+ printf("|                                                                   |\n");
+ printf("|                                                                   |\n");
+ printf("|                                  Designed by:                     |\n");
+ printf("|                                              -GAURAV PANT         |\n");
+ printf("|                                              -GAURAB CHAND BOHARA |\n");
+ printf("|___________________________________________________________________|\n");
+
+
     struct user usr,usr1;
     FILE *fp;
     char filename[50],phone[50],pword[50];
@@ -18,14 +30,14 @@ int main(){
     float amount;
 
     printf("\nWhat do you want to do?");
-    printf("\n\n1. Register an account");
+    printf("\n\n1. Register a new account");
     printf("\n2. Login to an account");
 
     printf("\n\nYour choice:\t");
     scanf("%d",&opt);
 
     if(opt == 1){
-        system("clear");
+        system("cls");
         printf("Enter your account number:\t");
         scanf("%s",usr.ac);
         printf("Enter your phone number:\t");
@@ -44,7 +56,7 @@ int main(){
         fclose(fp);
     }
     if(opt == 2){
-        system("clear");
+        system("cls");
         printf("\nPhone number:\t");
         scanf("%s",phone);
         printf("Password:\t");
@@ -60,7 +72,7 @@ int main(){
         if(!strcmp(pword,usr.password)){
             printf("\n\t\tWelcome %s",usr.phone);;
             while(cont == 'y'){
-                system("clear");
+                system("cls");
                 printf("\n\nPress 1 for balance inquiry");
                 printf("\nPress 2 for depositing cash");
                 printf("\nPress 3 for cash withdrawl");
